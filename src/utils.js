@@ -5,6 +5,4 @@ export const readInput = (filepath) => {
   return text.split('\n')
 }
 
-export const convertLinesToNumeric = (input) => {
-  return input.map((el) => +el)
-}
+export const convertLinesToNumeric = (input) => input.map((el) => +el)
