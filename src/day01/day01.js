@@ -24,14 +24,13 @@ const partOne = () => {
 }
 
 const partTwo = () => {
-  let result = 0
   let elfCalories = sumCaloriesByElf()
 
   elfCalories = elfCalories.sort((a, b) => b - a)
 
-  for (let i = 0; i < 3; i += 1) {
-    result += elfCalories[i]
-  }
+  const result = elfCalories
+    .slice(0, 3)
+    .reduce((sum, currentValue) => sum + currentValue, 0)
 
   console.log('-- Part Two --')
   console.log('Result: ', result)
